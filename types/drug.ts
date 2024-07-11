@@ -1,5 +1,5 @@
 export interface DrugType {
-  id: string;
+  slug: string;
   serial: string;
   name: string;
   category: string;

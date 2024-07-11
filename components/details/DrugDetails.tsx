@@ -1,7 +1,6 @@
-import { drugs } from '@/data/Drugs';
+import data from '@/data/data';
 import { DrugType } from '@/types/drug';
 import DrugItem from './DrugItem';
-
 
 import {
     Card,
@@ -9,11 +8,11 @@ import {
 } from "@/components/ui/card";
 import {
     Table,
+    TableBody,
     TableHead,
     TableHeader,
     TableRow
 } from "@/components/ui/table";
-
 
 export default function DrugDetails() {
     return (
@@ -35,9 +34,11 @@ export default function DrugDetails() {
                                 </TableHead>
                             </TableRow>
                         </TableHeader>
-                        {drugs.map((drug: DrugType) => (
-                            <DrugItem key={drug.id} drug={drug} />
-                        ))}
+                        <TableBody>
+                            {data.drugs.map((drug: DrugType) => (
+                                <DrugItem key={drug.slug} drug={drug} />
+                            ))}
+                        </TableBody>
                     </Table>
                 </CardContent>
             </Card>

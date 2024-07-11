@@ -1,7 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils"
-import { CreditCard, PillBottle, Store, Users } from "lucide-react"
+import { Bell, CreditCard, HelpCircle, PillBottle, Settings, Store, Users } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { ComponentProps } from "react"
@@ -35,17 +35,17 @@ export function Aside() {
                 <NavLink
                     href="/reminders"
                 >
-                    <CreditCard className="h-4 w-4 " />  Reminders
+                    <Bell className="h-4 w-4 " />  Reminders
                 </NavLink>
                 <NavLink
                     href="/settings"
                 >
-                    <CreditCard className="h-4 w-4 " />  Settings
+                    <Settings className="h-4 w-4 " />  Settings
                 </NavLink>
                 <NavLink
                     href="/help"
                 >
-                    <CreditCard className="h-4 w-4 " />  Help
+                    <HelpCircle className="h-4 w-4 " />  Help
                 </NavLink>
             </nav>
         </aside>
