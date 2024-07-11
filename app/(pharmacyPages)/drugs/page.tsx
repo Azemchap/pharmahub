@@ -11,7 +11,7 @@ import {
 
 export default function page() {
     return (
-        <div>
+        <div className="">
             <Card className="mb-6">
                 <CardHeader className="flex sm:flex-row sm:items-center justify-between gap-4">
                     <div className="grid gap-2">

@@ -24,7 +24,7 @@ const DrugItem: React.FC<DrugItemProps> = ({ drug }) => {
                     </div>
                 </Link>
             </TableCell>
-            <TableCell className="">
+            <TableCell className="hidden lg:flex">
                 {drug.category}
             </TableCell>
             <TableCell className="">
