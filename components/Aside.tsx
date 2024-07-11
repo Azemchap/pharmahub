@@ -32,6 +32,21 @@ export function Aside() {
                 >
                     <CreditCard className="h-4 w-4 " />  Sales
                 </NavLink>
+                <NavLink
+                    href="/reminders"
+                >
+                    <CreditCard className="h-4 w-4 " />  Reminders
+                </NavLink>
+                <NavLink
+                    href="/settings"
+                >
+                    <CreditCard className="h-4 w-4 " />  Settings
+                </NavLink>
+                <NavLink
+                    href="/help"
+                >
+                    <CreditCard className="h-4 w-4 " />  Help
+                </NavLink>
             </nav>
         </aside>
     )

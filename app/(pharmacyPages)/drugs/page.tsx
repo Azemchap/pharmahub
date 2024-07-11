@@ -21,6 +21,7 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
+import DrugDetails from "@/components/details/DrugDetails"
 
 export default function page() {
 
@@ -50,43 +51,7 @@ export default function page() {
                     </Button>
                 </CardHeader>
             </Card>
-            <Card>
-                <CardContent>
-                    <Table>
-                        <TableHeader>
-                            <TableRow>
-                                <TableHead>Drug name</TableHead>
-                                <TableHead className="">
-                                    Status
-                                </TableHead>
-                                <TableHead className="">
-                                    Date
-                                </TableHead>
-                            </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                            {data.map((item) => (
-                                <TableRow key={item.id}>
-                                    <TableCell>
-                                        <div className="font-medium">{item.fullName}</div>
-                                        <div className=" text-sm text-muted-foreground">
-                                            {item.email}
-                                        </div>
-                                    </TableCell>
-                                    <TableCell className="">
-                                        <Badge className="text-[10px] sm:text-sm" variant="outline">
-                                            {item.status}
-                                        </Badge>
-                                    </TableCell>
-                                    <TableCell >
-                                        <span className="text-[10px] sm:text-sm"> {item.date}</span>
-                                    </TableCell>
-                                </TableRow>
-                            ))}
-                        </TableBody>
-                    </Table>
-                </CardContent>
-            </Card>
+            <DrugDetails />
         </div>
     )
 }
