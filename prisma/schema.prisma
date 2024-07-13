@@ -6,32 +6,52 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
 model User {
-  id          String     @id @default(uuid())
-  clerkUserId String     @unique
-  email       String     @unique
+  id          String   @id @default(uuid())
+  clerkUserId String   @unique
+  email       String   @unique
   name        String?
   imageUrl    String?
-  createdAt   DateTime   @default(now())
-  updatedAt   DateTime   @updatedAt
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
   // resources   Resource[]
 }
 
-model Drugs {
-  id          String   @id @default(uuid())
-  title       String
-  description String
-  category    String
-  file        String
-  image       String
-  // userId      String
-  // user        User     @relation(fields: [userId], references: [clerkUserId], onDelete: Cascade)
-  createdAt   DateTime @default(now())
+// model Drugs {
+//   id          String   @id @default(uuid())
+//   title       String
+//   description String
+//   category    String
+//   file        String
+//   image       String
+//   // userId      String
+//   // user        User     @relation(fields: [userId], references: [clerkUserId], onDelete: Cascade)
+//   createdAt   DateTime @default(now())
 
-  // @@index([userId])
+//   // @@index([userId])
+// }
+
+model Drug {
+  id              String     @id @default(uuid())
+  slug            String   @unique
+  serial          String   @unique
+  name            String
+  category        String
+  similar_drugs   String[]
+  dosage_forms    String[]
+  old_stock       Int
+  old_stock_price Float
+  new_stock       Int
+  new_stock_price Float
+  description     String
+  use             String
+  side_effect     String[]
+  warnings        String[]
+  manufactured    String
+  expire          String
+  createdAt       DateTime @default(now())
 }
-

@@ -24,7 +24,7 @@ export default function layout({ children }: Readonly<{
                     <BreadcrumbSeparator />
                     <BreadcrumbItem>
                         <BreadcrumbLink>
-                            <Link href="/drugs">Drugs</Link>
+                            <Link href="/prescriptions">Prescription</Link>
                         </BreadcrumbLink>
                     </BreadcrumbItem>
                     <BreadcrumbSeparator />
