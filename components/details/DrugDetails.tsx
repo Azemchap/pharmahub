@@ -23,7 +23,7 @@ export default function DrugDetails() {
                         <TableHeader>
                             <TableRow>
                                 <TableHead>Drug Name</TableHead>
-                                <TableHead className="hidden lg:flex">
+                                <TableHead className="hidden lg:flex items-center">
                                     Category
                                 </TableHead>
                                 <TableHead className="">

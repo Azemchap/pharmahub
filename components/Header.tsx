@@ -28,7 +28,7 @@ import { ModeToggle } from "@/lib/ModeToggle"
 
 export function Header() {
     return (
-        <div className="shadow  fixed left-0 right-0 top-0 z-40">
+        <div className="shadow w-full  fixed  top-0 z-40">
             <header className="container mx-auto flex h-16 items-center gap-4 bg-background px-4 md:px-6 ">
                 <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
                     <Link

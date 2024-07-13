@@ -36,8 +36,7 @@ model User {
 // }
 
 model Drug {
-  id              String     @id @default(uuid())
-  slug            String   @unique
+  slug            String   @id @default(uuid())
   serial          String   @unique
   name            String
   category        String

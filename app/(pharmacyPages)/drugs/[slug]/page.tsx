@@ -86,14 +86,14 @@ export default function page({ params }: { params: { slug: string } }) {
                 </div>
 
                 <div>
-                    <h2 className='font-semibold leading-none tracking-tighttext-primary  mb-4'>Drug Details</h2>
+                    <h2 className='font-semibold leading-none tracking-tight text-primary  mb-4'>Drug Details</h2>
                     <h2 className='dark:text-gray-400 text-gray-500  mb-8'><span className='font-semibold  leading-none text-primary tracking-tight'>Description</span> : {drug.description}</h2>
 
 
                     <Tabs defaultValue="side_effect" >
                         <TabsList className="grid w-full grid-cols-3">
-                            <TabsTrigger value="use">Use</TabsTrigger>
                             <TabsTrigger value="side_effect">Side Effect</TabsTrigger>
+                            <TabsTrigger value="use">Use</TabsTrigger>
                             <TabsTrigger value="warnings">Warnings</TabsTrigger>
                         </TabsList>
                         <TabsContent value="use">
@@ -105,7 +105,7 @@ export default function page({ params }: { params: { slug: string } }) {
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent className="space-y-2">
-                                    <div className="space-y-1 flex items-center gap-2">
+                                    <div className="space-y-1 flex items-start gap-2">
                                         <CheckCircle className='w-4' />{drug.use}
                                     </div>
                                 </CardContent>
@@ -123,7 +123,7 @@ export default function page({ params }: { params: { slug: string } }) {
                                 <CardContent className="space-y-2">
                                     <div className="space-y-1">
                                         {drug.side_effect.map((item, index) => (
-                                            <div key={index} className='flex items-center gap-2'><CheckCircle className='w-4' /> {item}</div>
+                                            <div key={index} className='flex items-start gap-2'><CheckCircle className='w-4' /> {item}</div>
                                         ))}
                                     </div>
                                 </CardContent>
@@ -132,15 +132,15 @@ export default function page({ params }: { params: { slug: string } }) {
                         <TabsContent value="warnings">
                             <Card>
                                 <CardHeader>
-                                    <CardTitle>Password</CardTitle>
+                                    <CardTitle>Warnings</CardTitle>
                                     <CardDescription>
-                                        Change your password here. After saving, be logged out.
+                                        Take a degree of caution when using this drug.
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent className="space-y-2">
-                                {drug.warnings.map((item, index) => (
-                                            <div key={index} className='flex items-center gap-2'><CheckCircle className='w-4' /> {item}</div>
-                                        ))}
+                                    {drug.warnings.map((item, index) => (
+                                        <div key={index} className='flex items-start gap-2'><CheckCircle className='w-4' /> {item}</div>
+                                    ))}
                                 </CardContent>
                             </Card>
                         </TabsContent>

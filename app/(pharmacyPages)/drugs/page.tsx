@@ -21,8 +21,8 @@ export default function page() {
                         </CardDescription>
                     </div>
                     <Button asChild size="sm" className="bg-primary gap-1">
-                        <Link href="/prescriptions/new">
-                            Add Drug
+                        <Link href="/drugs/create">
+                            New Drug
                         </Link>
                     </Button>
                 </CardHeader>

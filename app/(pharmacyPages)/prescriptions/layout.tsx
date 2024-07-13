@@ -25,7 +25,7 @@ export default function layout({ children }: Readonly<{
                     </div>
                     <Button asChild size="sm" className="bg-primary gap-1">
                         <Link href="/prescriptions/create">
-                            Add Prescription
+                            New Prescription
                         </Link>
                     </Button>
                 </CardHeader>

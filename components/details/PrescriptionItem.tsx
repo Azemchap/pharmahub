@@ -14,8 +14,7 @@ interface PrescriptionItemProps {
 
 const PrescriptionItem: React.FC<PrescriptionItemProps> = ({ prescription }) => {
     return (
-
-        <TableRow  >
+        <TableRow className="w-full" >
             <TableCell>
                 <Link href={`/prescriptions/${prescription.slug}`} className="hover:bg-secondary-foreground">
                     <div className="font-medium">{prescription.patient_name}</div>
@@ -27,7 +26,7 @@ const PrescriptionItem: React.FC<PrescriptionItemProps> = ({ prescription }) => 
             <TableCell className="">
                 {prescription.drug_name}
             </TableCell>
-            <TableCell >
+            <TableCell className="hidden lg:flex items-center">
                 <span className="text-[10px] sm:text-sm"> {prescription.dosage}</span>
             </TableCell>
             <TableCell className="">
@@ -35,7 +34,6 @@ const PrescriptionItem: React.FC<PrescriptionItemProps> = ({ prescription }) => 
                     {prescription.prescriber_name}
                 </Badge>
             </TableCell>
-
         </TableRow>
     );
 };

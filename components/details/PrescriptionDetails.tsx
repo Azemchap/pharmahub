@@ -27,7 +27,7 @@ export default function PrescriptionDetails() {
                                 <TableHead className="">
                                     Drug
                                 </TableHead>
-                                <TableHead className="">
+                                <TableHead className="hidden lg:flex items-center">
                                     Dosage
                                 </TableHead>
                                 <TableHead className="">
